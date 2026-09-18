@@ -1,0 +1,49 @@
+# Build output / Compiled objects
+build*/
+build/
+.cache/
+compile_commands.json
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+
+# Datasets 
+data/*.csv
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and Temp
+*.log
+tmp/
+temp/
+
+# Secrets / Environment Variables 
+.env
+.env.local
+*.pem
