@@ -22,16 +22,12 @@ jobs:
         compiler: [gcc, clang]
         config: [debug-sanitize, release]
         include:
-          - compiler: gcc
-            cxx: g++
-          - compiler: clang
-            cxx: clang++
           - config: debug-sanitize
             cmake_args: -DCMAKE_BUILD_TYPE=Debug -DSANITIZE=ON
           - config: release
             cmake_args: -DCMAKE_BUILD_TYPE=Release
     env:
-      CXX: ${{ matrix.cxx }}
+      CXX: ${{ matrix.compiler == 'gcc' && 'g++' || 'clang++' }}
       UBSAN_OPTIONS: print_stacktrace=1
     steps:
       - uses: actions/checkout@v7
@@ -44,7 +40,9 @@ jobs:
         run: sudo sysctl vm.mmap_rnd_bits=28
 
       - name: Tool versions
-        run: $CC --version && cmake --version && ninja --version
+        run: |
+          echo "CXX=$CXX"
+          $CXX --version && cmake --version && ninja --version
 
       - name: Configure
         run: cmake -S . -B build -G Ninja -DWARNINGS_AS_ERRORS=ON ${{ matrix.cmake_args }}
