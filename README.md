@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/TomasrRodrigues/ml-from-scratch/actions/workflows/ci.yml/badge.svg)](https://github.com/TomasrRodrigues/ml-from-scratch/actions/workflows/ci.yml)
 
-CS229 algorithms implemented from scratch in C11, each derived on paper, gradient-checked, and validated against scikit-learn.
+CS229 algorithms implemented from scratch in C++17, each derived on paper, gradient-checked, and validated against scikit-learn.
 
 **Status:** in progress (build and test infrastructure only; no results yet).
 
@@ -19,7 +19,7 @@ CS229 algorithms implemented from scratch in C11, each derived on paper, gradien
 
 ## Build and test
 
-Requires CMake ≥ 3.20 and GCC or Clang on Linux (WSL2 works).
+Requires CMake ≥ 3.20 and a C++17 compiler (GCC or Clang) on Linux (WSL2 works).
 
 ```bash
 cmake -B build && cmake --build build -j && ctest --test-dir build --output-on-failure

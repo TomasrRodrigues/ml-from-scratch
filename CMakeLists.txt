@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
-project(ml_from_scratch LANGUAGES C)
+project(ml_from_scratch LANGUAGES CXX)
 
-# Strict C11: -std=c11, not -std=gnu11
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_STANDARD_REQUIRED ON)
-set(CMAKE_C_EXTENSIONS OFF)
+# Strict C++17: -std=c++17, not -std=gnu++17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 # compile_commands.json for editors / clang-tidy
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
