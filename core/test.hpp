@@ -45,4 +45,4 @@ inline int report() {
 // Macros only for what functions cannot do: capture expression text, file and line.
 #define CHECK(cond) ::mlcore::test::check(static_cast<bool>(cond), #cond, __FILE__, __LINE__)
 #define CHECK_NEAR(a, b, tol)                                                                      \
-    ::mlcore::test::check_near((a), (b), (tol), #a, #b, __FILE__, __LINE__)    ::mlcore::test::check_near((a), (b), (tol), #a, #b, __FILE__, __LINE__)
+    ::mlcore::test::check_near((a), (b), (tol), #a, #b, __FILE__, __LINE__)
