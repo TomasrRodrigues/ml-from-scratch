@@ -7,3 +7,7 @@ target_include_directories(core INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 add_executable(test_smoke tests/test_smoke.cpp)
 target_link_libraries(test_smoke PRIVATE core project_options)
 add_test(NAME core.smoke COMMAND test_smoke)
+
+add_executable(test_mat tests/test_mat.cpp)
+target_link_libraries(test_mat PRIVATE core project_options)
+add_test(NAME core.mat COMMAND test_mat)
