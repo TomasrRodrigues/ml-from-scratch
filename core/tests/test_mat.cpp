@@ -23,7 +23,7 @@ int main() {
     //   [1 2 3]   [ 7  8]   [ 58  64]
     //   [4 5 6] * [ 9 10] = [139 154]
     //             [11 12]
-    /*
+    
     Matrix b(3, 2, {7, 8, 9, 10, 11, 12});
     Matrix ab = mlcore::matmul(a, b);
     CHECK(ab.rows() == 2);
@@ -32,10 +32,10 @@ int main() {
     CHECK_NEAR(ab(0, 1), 64.0, 1e-12);
     CHECK_NEAR(ab(1, 0), 139.0, 1e-12);
     CHECK_NEAR(ab(1, 1), 154.0, 1e-12);
-    */
+    
 
     // Non-square transpose: (2x3) -> (3x2)
-    /*
+    
     Matrix at = mlcore::transpose(a);
     CHECK(at.rows() == 3);
     CHECK(at.cols() == 2);
@@ -69,6 +69,6 @@ int main() {
             CHECK_NEAR(lhs(i, j), rhs(i, j), 1e-12);
         }
     }
-    */
+    
     return mlcore::test::report();
 }
