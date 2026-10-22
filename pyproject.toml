@@ -1,0 +1,15 @@
+[project]
+name = "ml-from-scratch"
+version = "0.1.0"
+description = "Core machine learning algorithms implemented from scratch in vectorized Python (NumPy). Built from first principles with unit-test verification against reference baselines."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

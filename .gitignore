@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# uv / virtual environment
+.venv/
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# C++ builds
+build/
+*.o
+*.so
+*.out
+
+# Data & generated outputs
+data/
+*.npy
+*.npz
+
+# Course material (Moodle content is not redistributable)
+*.pdf
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
